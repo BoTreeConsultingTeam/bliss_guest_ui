@@ -10,7 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery-1.11.1.min
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require bootstrap-datetimepicker.min
+//= require html5shiv.min
+//= require ie8-responsive-file-warning
+//= require ie10-viewport-bug-workaround
+//= require ie-emulation-modes-warning
+//= require respond.min
+//= require select2.min
+//= require icheck.min
+//= require common
 //= require_tree .

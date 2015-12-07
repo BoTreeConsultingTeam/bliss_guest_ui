@@ -1,0 +1,185 @@
+input[type="text"],
+input[type="file"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"], {
+  width: 100%;
+  float: left;
+  height: 34px;
+  border: solid 1px $light-gray;
+  padding: 5px 10px;
+  font-family: $natosans-reg;
+  font-size: 16px;
+  color: $black;
+  @include transition-05;
+
+  &:focus {
+    border: solid 1px $gray;
+    box-shadow: none;
+    @include transition-05;
+  }
+
+}
+textarea{
+  width: 100%;
+  float: left;
+  height: 90px;
+  border: solid 1px $light-gray;
+  padding: 5px 15px;
+  font-family: $natosans-reg;
+  font-size: 16px;
+  color: $black;
+  resize: none;
+  &:focus {
+    border: solid 1px $light-gray;
+    box-shadow: none;
+  }
+
+}
+
+input[type="text"],
+input[type="file"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+.input-group,
+.form-control,
+.form-controls,
+textarea,
+.btn-group,
+.select2-container {
+  margin: 0px 0px 20px 0px !important;
+}
+
+::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+:-moz-placeholder {
+  font-size: 12px;
+}
+
+::-moz-placeholder {
+  font-size: 12px;
+}
+
+:-ms-input-placeholder {
+  font-size: 12px;
+}
+
+
+
+
+.btn-group {
+	.btn-success,
+	.btn-default,
+	.btn-primary,
+	.btn-info,
+	.btn-warning,
+	.btn-danger{
+		@include border-radius-zero;
+		margin: 0px 0px 0px 0px;
+		padding: 6px 12px;
+		font-family: $natosans-reg;
+		font-size: 15px;
+		color: $black;
+		text-transform: $txt-normal;
+	}
+
+}
+@each $btndemo in success,  default, primary, info, warning, danger {
+    .btn-#{$btndemo} {
+      margin: 0px 0px 20px 0px;
+      font-family: $natosans-bold;
+      font-size: 15px;
+      color: $white;
+      text-transform: $txt-uppercase;
+      padding: 10px 25px;
+      @include border-radius-2;
+      @include transition25;
+      outline: none;
+     }
+     .btn-#{$btndemo}:hover{
+        @include transition25; 
+        outline: none;
+        color: $white !important;
+     }
+     .btn-#{$btndemo}:focus{
+        @include transition25; 
+        outline: none;
+        color: $white !important;
+     }
+     .btn-#{$btndemo}:active{
+        @include transition25; 
+        outline: none;
+        color: $white !important;
+     }
+}
+input[type="text"] {
+  @include border-radius-2;
+  @include box-shadow-none;
+
+  &.form-control[disabled],
+  &.form-control[readonly] {
+    background: $white;
+  }
+
+}
+
+.input-group-addon {
+  @include border-radius-zero;
+  background-color: $white;
+}
+.btn-group.custom-input{
+  width: 100%;
+  display: table;
+.btn.radio-button-group {
+    background: $white;
+    @include border-radius-zero;
+    height: 34px;
+    @include transition25;
+    line-height: 19px;
+    width: auto;
+    float: none;
+    display: table-cell;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include box-shadow-none;
+      border: solid 1px $dark-green;
+      background: $green;
+      color: $white;
+      @include transition25;
+    }
+
+    &.active {
+      background: $green;
+      color: $white;
+      border: solid 1px $dark-green;
+    }
+
+  }
+}
+.checkbox, .radio{
+  label{
+    padding: 0px;
+  }
+}
+.input-group {
+  input[type="text"],
+  input[type="file"],
+  input[type="url"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"] {
+    margin: 0px !important;
+  }
+
+}

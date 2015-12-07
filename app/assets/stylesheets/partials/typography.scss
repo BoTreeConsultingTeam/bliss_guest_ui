@@ -1,0 +1,79 @@
+* {
+	outline: none;
+}
+
+p, dt, kbd kbd, label {
+	font-family: $natosans-reg;
+	font-size: 15px;
+	color: $black;
+	text-transform: $txt-normal;
+	margin: 0px 0px 10px 0px;
+	font-weight: normal;
+}
+label.icheck{
+	line-height: 20px;
+	cursor: pointer;
+	margin: 0px 0px 20px 0px;
+}
+h1 {
+	font-family: $natosans-reg;
+	font-size: 24px;
+	color: $black;
+	margin: 0px 0px 20px 0px;
+}
+
+h2 {
+	font-family: $natosans-bold;
+	font-size: 22px;
+	color: $black;
+	text-transform: $txt-uppercase;
+	margin: 0px 0px 20px 0px;
+}
+
+h3 {
+	font-family: $natosans-bold;
+	font-size: 20px;
+	color: $black;
+	text-transform: $txt-uppercase;
+	margin: 0px 0px 20px 0px;
+}
+
+h4 {
+	font-family: $natosans-bold;
+	font-size: 18px;
+	color: $black;
+	text-transform: $txt-uppercase;
+	margin: 0px 0px 20px 0px;
+}
+
+h5 {
+	font-family: $natosans-bold;
+	font-size: 16px;
+	color: $black;
+	text-transform: $txt-uppercase;
+	margin: 0px 0px 20px 0px;
+}
+
+h6 {
+	font-family: $natosans-bold;
+	font-size: 14px;
+	color: $black;
+	text-transform: $txt-uppercase;
+	margin: 0px 0px 20px 0px;
+}
+
+a {
+	text-decoration: none;
+	@include transition25;
+	font-family: $natosans-reg;
+	font-size: 15px;
+	color: $black;
+
+	&:hover,
+	&:focus {
+		color: $green !important;
+		text-decoration: none;
+		@include transition25;
+	}
+
+}

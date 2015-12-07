@@ -1,0 +1,273 @@
+.reservation-main-box {
+	width: 100%;
+	float: left;
+	height: auto;
+
+	h1 {
+		@include main-title;
+	}
+
+}
+
+/*=========================== RESERVATION PAGE ==================================*/
+.reservation-form-box {
+	width: 100%;
+	float: left;
+	height: auto;
+
+	.calendar-box {
+		width: 100%;
+		float: left;
+		height: auto;
+		.datetimepicker{
+			width: 100%;
+			table{
+				width: 100%;				
+			}
+			td, th{
+				border: solid 1px $light-gray;
+				height: 35px;
+				width: 14.2857%;
+			}
+			table tr td.active, 
+			table tr td.active.disabled, 
+ 			table tr td.active.disabled:hover, 
+ 			table tr td.active:hover,
+ 			table tr td.today.active{
+ 				background: $light-red;
+ 				@include border-radius-zero;
+ 			}
+ 			table tr td.today, 
+ 			table tr td.today.disabled, 
+ 			table tr td.today.disabled:hover, 
+ 			table tr td.today:hover{
+ 				background: $light-gray;
+ 				@include border-radius-zero;	
+ 			}
+		}
+	}
+
+	h5 {
+		font-family: $natosans-reg;
+		margin: 0px 0px 20px 0px;
+		color: $black;
+		font-size: 16px;
+		text-transform: $txt-normal;
+	}
+
+	p {
+		margin: 0px 0px 5px 0px;
+	}
+
+	.dep-message {
+		font-family: $natosans-reg;
+		font-size: 14px;
+		color: $red;
+		text-transform: $txt-normal;
+	}
+
+}
+
+/*=========================== AVAILABLE PAGE ==================================*/
+.available-lodging {
+	width: 100%;
+	float: left;
+	height: auto;
+	margin: 0px;
+
+	.available-list-box {
+		width: 100%;
+		float: left;
+		height: auto;
+		position: relative;
+		padding: 15px 0px 15px 145px;
+		border-bottom: solid 1px $light-gray;
+		min-height: 160px;
+		margin: 0px 0px 5px 0px;
+
+		&:last-child {
+			margin: 0px 0px 30px 0px;
+		}
+
+		.thumb-img-box {
+			width: 135px;
+			height: 135px;
+			position: absolute;
+			left: 0px;
+			top: 10px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+		}
+
+		.more-info-box {
+			width: 200px;
+			float: right;
+			height: auto;
+			text-align: right;
+
+			.btn-success {
+				margin: 0px;
+			}
+
+			p {
+				font-family: $natosans-bold;
+				font-size: 12px;
+				text-transform: $txt-uppercase;
+			}
+
+			h2 {
+				margin: 10px 0px 30px 0px;
+				color: $green;
+			}
+
+		}
+
+		h5 {
+			margin: 0px 0px 10px 0px;
+		}
+
+	}
+
+}
+
+/*=========================== LOGIN PAGE ==================================*/
+.login-main-box {
+	width: 100%;
+	float: left;
+	height: auto;
+	border: solid 1px $light-gray;
+	padding: 25px 25px 5px;
+	margin: 60px 0px 0px 0px;
+
+	a.forgot-pass {
+		float: right;
+		margin: 0px 0px 20px 0px;
+		font-size: 12px;
+	}
+
+	.ext-account {
+		margin: 0px 0px 55px 0px;
+	}
+
+	input[type="password"] {
+		margin: 0px 0px 10px 0px;
+	}
+
+}
+
+.login-saparator {
+	width: 100%;
+	float: left;
+	height: auto;
+	height: 290px;
+	display: table;
+	margin: 60px 0px 0px 0px;
+
+	p {
+		width: 100%;
+		text-align: center;
+		height: 100%;
+		vertical-align: middle;
+		display: table-cell;
+
+		span {
+			background: $black;
+			color: $white;
+			font-family: $natosans-bold;
+			font-size: 16px;
+			padding: 10px;
+			color: $white;
+			text-transform: $txt-uppercase;
+			@include border-radius-50per;
+		}
+
+	}
+
+}
+
+.agreement-box {
+	width: 100%;
+	float: left;
+	height: auto;
+	position: relative;
+	padding: 0px 0px 0px 30px;
+	margin: 0px 0px 20px 0px;
+
+	&:first-child {
+		margin: 20px 0px 20px 0px;
+	}
+
+	.checkbox {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		margin: 0px;
+	}
+
+	h6 {
+		margin: 0px 0px 2px 0px;
+	}
+
+}
+
+.reservation-note {
+	width: 100%;
+	float: left;
+	height: auto;
+	margin: 0px 0px 30px 0px;
+
+	p {
+		font-family: $natosans-bold;
+		font-size: 15px;
+		color: $black;
+
+		a {
+			color: #4f4f4f;
+			font-family: $natosans-bold;
+		}
+
+	}
+
+}
+
+/*============================================ RESERVATION SUMMARY =======================================*/
+.reservation-summary-box {
+	width: 100%;
+	float: left;
+	height: auto;
+	margin: 0px 0px 30px 0px;
+
+	&:first-child {
+		margin: 20px 0px 30px 0px;
+	}
+
+	h6 {
+		text-transform: $txt-normal;
+		font-size: 16px;
+		margin: 0px 0px 3px 0px;
+	}
+
+	p {
+		margin: 0px;
+	}
+
+}
+
+.modal-agree {
+	.modal-content {
+		@include border-radius-5;
+		border: solid 1px $red;
+	}
+
+	.btn-success,
+	.btn-danger {
+		margin: 0px;
+	}
+
+}
