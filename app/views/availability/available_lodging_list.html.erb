@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="reservation-main-box">
+      <h1>Personal Retreat Availability</h1>
+    </div>
+    <div class="row">
+      <div class="available-lodging">
+        <div class="col-xs-12">
+          <p>This is the screen after they click the Check Availability button. This message will change based on what is available. I recommend a slight change in the flow here as well. Based on their answers, simply show any availability and ONE price as shown below. I suggest have them detail the number of guests on the previous screen (how many adults, children, and seniors) so that the system will know which price to show on this screen. We will have a regular page on the website that describes the lodging in much more detail and offers more pictures, so no need to take them away from this screen when they’re ready to reserve  now. Details could be placed in the help icon too.</p>
+          <h4>Dates Selected:</h4>
+          <p>00/00/0000  –  00/00/0000  (simply show their dates at the top of the screen)</p>
+          <h4>Available Lodging:</h4>
+        </div>
+        <div class="col-xs-12">
+          <% @lodgings_list.each do |available_lodgings| %>
+            <div class="available-list-box">
+              <div class="thumb-img-box">
+                <img src="/assets/list-thumb.jpg" alt="">
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <h5><%= available_lodgings[0].split('_').join("\n") unless available_lodgings[1].blank? %> <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Cabin (no bath)"></i></h5>
+                <p>You can place a short description or any important notes about this type of lodging in this space.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="more-info-box">
+                  <p>Per Adult/Per Night</p>
+                  <h2>$100.00</h2>
+                  <a href="#" class="btn btn-success" title="More Info" target="_parent">More Info</a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-xs-12">
+          <button type="submit" name="" value="" class="btn btn-success" title="Return To Availability">Return To Availability</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
