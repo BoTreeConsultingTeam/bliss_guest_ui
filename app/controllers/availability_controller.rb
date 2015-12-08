@@ -6,10 +6,5 @@ class AvailabilityController < ApplicationController
     session[:date] = params[:date]
     @check_availability = Availability::ReservationAvailabilityDisplay.new(params)
     @lodgings_list = @check_availability.call
-    if @lodgings_list.present?
-      redirect_to available_lodging_list_path
-    else
-      render 'check_availability'
-    end
   end
 end
