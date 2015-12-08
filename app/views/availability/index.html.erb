@@ -27,11 +27,8 @@
               <div class="clearfix"></div>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <p>Departure <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Departure"></i></p>
-                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                  <%= text_field_tag :departure_date, nil,class:"form-control", size:"16", readonly: true%>
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                </div>
-                <input type="hidden" id="dtp_input2" value="" />
+                <%= text_field_tag :departure_date, nil,class:"form-control", size:"16", readonly: true, disabled: true%>
+                <input type="hidden" id="dtp_input1" value="" />
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <p># Of Guests (including children) <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="# Of Guests (including children)"></i></p>
@@ -88,6 +85,8 @@
   $('#myModal').on('hidden.bs.modal', function () {
     $('#total_nights').val('');
     $('#arrival_date').val('');
-
+  })
+  $('#total_nights').change(function(){
+    Availability.setDepartureDate()
   })
 </script>

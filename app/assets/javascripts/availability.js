@@ -1,8 +1,12 @@
-var Availability= (function() {
-    function isWeekend(){
+var Availability = (function() {
+    function arrivalDate(){
         var date = $('#dtp_input2').val();
         var dsplit = date.split("-");
-        var day = new Date(dsplit[0],dsplit[1]-1,dsplit[2]);
+        return new Date(dsplit[0],dsplit[1]-1,dsplit[2]);
+    }
+
+    function isWeekend(){
+        var day = Availability.arrivalDate();
         var isWeekend = (day == 6) || (day == 0);
         return isWeekend
     }
@@ -31,11 +35,9 @@ var Availability= (function() {
     }
 
     function isEarlyThenSevenDays(){
-        var date = $('#dtp_input2').val();
-        var dsplit = date.split("-");
-        var selectedDate = new Date(dsplit[0],dsplit[1]-1,dsplit[2]);
         var currentDate = new Date();
         var futureDate = currentDate.setDate(currentDate.getDate()+7);
+        var selectedDate = Availability.arrivalDate()
         if (selectedDate > futureDate){
             return true
         }
@@ -46,12 +48,24 @@ var Availability= (function() {
         if((isEarlyThenSevenDays() && lessNightCount() && (isWeekend() ||isHoliday()))){
             $('#myModal').modal('show');
         }
-
     }
+
+    function setDepartureDate(){
+        var arrivalDate = Availability.arrivalDate();
+        var night_count = parseInt($('#total_nights').val());
+        var departureDate = arrivalDate.setDate(arrivalDate.getDate()+ night_count);
+        var dep_date =  new Date(departureDate);
+        var formated_date  =(dep_date.getMonth() + 1) + '/' + dep_date.getDate() + '/' +  dep_date.getFullYear();
+        $('#dtp_input1').val(formated_date);
+        $('#departure_date').val(formated_date);
+    }
+
     return {
         isWeekend: isWeekend,
         isHoliday: isHoliday,
         isWarnable: isWarnable,
-        isEarlyThenSevenDays: isEarlyThenSevenDays
+        isEarlyThenSevenDays: isEarlyThenSevenDays,
+        arrivalDate: arrivalDate,
+        setDepartureDate: setDepartureDate
     };
 })();

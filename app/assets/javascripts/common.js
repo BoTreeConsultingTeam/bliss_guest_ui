@@ -7,6 +7,7 @@ $(document).ready(function(){
     //bootstrap datetimepicker
     $('.form_date').datetimepicker({
         language:  'en',
+        format: 'mm/dd/yyyy',
         weekStart: 1,
         todayBtn:  0,
         autoclose: 1,
