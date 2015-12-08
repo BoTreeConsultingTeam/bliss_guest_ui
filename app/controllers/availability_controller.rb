@@ -13,4 +13,10 @@ class AvailabilityController < ApplicationController
     holiday = @selected_date.holiday?
     render json: holiday
   end
+
+  def check_restricted_period
+    @selected_date = Availability::ReservationAvailabilityDisplay.new(params)
+    restricted_period = @selected_date.overlaping_period?
+    render json: restricted_period
+  end
 end

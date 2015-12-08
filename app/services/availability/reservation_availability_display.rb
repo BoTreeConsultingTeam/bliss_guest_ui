@@ -14,4 +14,9 @@ class Availability::ReservationAvailabilityDisplay
     response = send_http_request('/admin/check_holiday.json', 'post', @parameters )
     JSON.parse(response.body)
   end
+
+  def overlaping_period?
+    response = send_http_request('reservations/check_date_range.json', 'get', @parameters )
+    JSON.parse(response.body)
+  end
 end

@@ -13,20 +13,20 @@
                 <h5>Check specific dates or browse availablilty on the calendar.</h5>
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <p>Arrival <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Arrival date"></i></p>
+                <p>Arrival Date <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Arrival date"></i></p>
                 <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                  <%= text_field_tag :arrival_date, nil,class:"form-control", size:"16", readonly: true, onChange: 'Availability.isWarnable();'%>
+                  <%= text_field_tag :arrival_date, nil,class:"form-control", size:"16", readonly: true, onChange: 'Availability.ShowWarningPopup()'%>
                   <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
                 <input type="hidden" id="dtp_input2" value="" />
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <p>Number Of Nights <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title= "<%= "#{t('help.availability.night_count')}"  %>" ></i></p>
-                <%= select_tag "nights", options_for_select(1..6, include_blank: true ), prompt: "Please select", class: "select2", id: 'total_nights', onChange: 'Availability.isWarnable();'%>
+                <%= select_tag "nights", options_for_select(1..6, include_blank: true ), prompt: "Please select", class: "select2", id: 'total_nights', onChange: 'Availability.ShowWarningPopup()'%>
               </div>
               <div class="clearfix"></div>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <p>Departure <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Departure"></i></p>
+                <p>Departure Date <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Departure"></i></p>
                 <%= text_field_tag :departure_date, nil,class:"form-control", size:"16", readonly: true, disabled: true%>
                 <input type="hidden" id="dtp_input1" value="" />
               </div>
@@ -85,6 +85,7 @@
   $('#myModal').on('hidden.bs.modal', function () {
     $('#total_nights').val('');
     $('#arrival_date').val('');
+    $('#departure_date').val('');
   })
   $('#total_nights').change(function(){
     Availability.setDepartureDate()
