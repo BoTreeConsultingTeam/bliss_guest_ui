@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  help:
+    availability:
+      night_count: 'This is the number of nights you would like to reserve. If you would like to reserve more than 6 days in a row, please contact Breitenbush directly.'

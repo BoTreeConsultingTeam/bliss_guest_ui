@@ -7,4 +7,10 @@ class AvailabilityController < ApplicationController
     @check_availability = Availability::ReservationAvailabilityDisplay.new(params)
     @lodgings_list = @check_availability.call
   end
+
+  def check_holiday
+    @selected_date = Availability::ReservationAvailabilityDisplay.new(params)
+    holiday = @selected_date.holiday?
+    render json: holiday
+  end
 end

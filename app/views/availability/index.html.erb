@@ -1,3 +1,4 @@
+<%= render partial: 'shared/warning_popup'%>
 <div class="row">
   <div class="col-xs-12">
     <div class="reservation-main-box">
@@ -14,14 +15,14 @@
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <p>Arrival <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Arrival date"></i></p>
                 <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                  <%= text_field_tag :arrival_date, nil,class:"form-control", size:"16", readonly: true%>
+                  <%= text_field_tag :arrival_date, nil,class:"form-control", size:"16", readonly: true, onChange: 'Availability.isWarnable();'%>
                   <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
                 <input type="hidden" id="dtp_input2" value="" />
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <p>Number Of Nights <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Number Of Nights"></i></p>
-                <%= select_tag "nights", options_for_select(1..6), class: "select2"%>
+                <p>Number Of Nights <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title= "<%= "#{t('help.availability.night_count')}"  %>" ></i></p>
+                <%= select_tag "nights", options_for_select(1..6, include_blank: true ), prompt: "Please select", class: "select2", id: 'total_nights', onChange: 'Availability.isWarnable();'%>
               </div>
               <div class="clearfix"></div>
               <div class="col-md-6 col-sm-6 col-xs-12">
@@ -83,3 +84,10 @@
     </div>
   </div>
 </div>
+<script>
+  $('#myModal').on('hidden.bs.modal', function () {
+    $('#total_nights').val('');
+    $('#arrival_date').val('');
+
+  })
+</script>

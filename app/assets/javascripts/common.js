@@ -1,5 +1,8 @@
 $(document).ready(function(){
-    $( ".select2" ).select2();
+    $( ".select2" ).select2({
+        placeholder: '-- Please Select --',
+        minimumResultsForSearch: Infinity
+    });
 
     //bootstrap datetimepicker
     $('.form_date').datetimepicker({

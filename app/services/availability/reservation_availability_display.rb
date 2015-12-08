@@ -9,4 +9,9 @@ class Availability::ReservationAvailabilityDisplay
     response = send_http_request('availability/potential_reservations.json', 'get', @parameters )
     JSON.parse(response.body)
   end
+
+  def holiday?
+    response = send_http_request('/admin/check_holiday.json', 'post', @parameters )
+    JSON.parse(response.body)
+  end
 end

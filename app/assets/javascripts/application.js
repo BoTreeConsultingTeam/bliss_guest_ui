@@ -22,5 +22,6 @@
 //= require respond.min
 //= require select2.min
 //= require icheck.min
+//= require availability
 //= require common
 //= require_tree .
