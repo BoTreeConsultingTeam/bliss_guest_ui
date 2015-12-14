@@ -32,7 +32,7 @@
                       </div>
                     </div>
                     <div class="col-lg-12 text-right"><a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-success" title="More Info" target="_parent">More Info</a>
-                      <%= link_to "Reserved", "#", :method=>'post', class:"btn btn-danger", title: "Reserved"%>
+                      <%= link_to "Reserved", reserve_lodging_path(lodging["lodging_id"]), class:"btn btn-danger", title: "Reserved"%>
                     </div>
                   </div>
                 <% end %>

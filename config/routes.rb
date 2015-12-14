@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'availability/lodgings/list' => 'availability#available_lodging_list', as: :available_lodging_list
   post 'availability/check_holiday' => 'availability#check_holiday'
   post 'availability/check_restricted_period' => 'availability#check_restricted_period'
-  post 'reservations/reserve_lodging' => 'reservations#reserve_lodging' , :as => :reserve_lodging
+  get 'reservations/reserve_lodging/:id' => 'reservations#reserve_lodging' , :as => :reserve_lodging
   get 'guests/display_checklist' => 'guests#display_checklist', as: :display_checklist
+  get 'guests/login' => 'guests#login'
 end

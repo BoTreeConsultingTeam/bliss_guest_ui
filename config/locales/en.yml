@@ -1,27 +1,10 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
   help:
     availability:
       night_count: 'This is the number of nights you would like to reserve. If you would like to reserve more than 6 days in a row, please contact Breitenbush directly.'
       guest_count: 'If the total number of guests(including children) is more than 4. please contact Breitenbush directly.'
+      wts: 'If	you are coming to Breitenbush alone you can expect to share with one other person of the same gender. You can indicate
+        you want guaranteed  privacy(availability and prices will vary depending on time of week and time of year)or indicate you are
+        willing to share. For Guaranteed Privacy the rates are doubled except for mid-week, non-holiday during the non-peak season.
+         when GP costs $45 a night.'

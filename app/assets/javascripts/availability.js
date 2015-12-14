@@ -61,7 +61,7 @@ var Availability = (function() {
                 async:   false,
                 data: { date: date, nightCount: nightCount },
                 success: function(data) {
-                    result_hash = data.restricted_period
+                    result_hash = data.restricted_period.restricted_period
                 }
 
             });
@@ -93,7 +93,7 @@ var Availability = (function() {
     function ShowWarningPopup(){
         if($('#total_nights').val().length > 0){
             overlapRestrictedPeriodHash = overlapRestrictedPeriod();
-            restricted_period = $.isEmptyObject(overlapRestrictedPeriodHash)
+            restricted_period = $.isEmptyObject(overlapRestrictedPeriodHash);
             if(isWarnable() || !restricted_period ){
                 $('#myModal').modal('show');
             }
