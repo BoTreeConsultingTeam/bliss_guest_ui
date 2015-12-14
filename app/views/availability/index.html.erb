@@ -31,7 +31,7 @@
                 <input type="hidden" id="dtp_input1" value="" />
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <p># Of Guests (including children) <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="# Of Guests (including children)"></i></p>
+                <p># Of Guests (including children) <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="<%= "#{t('help.availability.guest_count')}"  %>"></i></p>
                 <%= select_tag "people", options_for_select(1..4), class: "select2"%>
               </div>
               <div class="clearfix"></div>

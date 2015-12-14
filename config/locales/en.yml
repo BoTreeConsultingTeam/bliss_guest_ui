@@ -24,3 +24,4 @@ en:
   help:
     availability:
       night_count: 'This is the number of nights you would like to reserve. If you would like to reserve more than 6 days in a row, please contact Breitenbush directly.'
+      guest_count: 'If the total number of guests(including children) is more than 4. please contact Breitenbush directly.'

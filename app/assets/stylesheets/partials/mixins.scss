@@ -1,68 +1,68 @@
 @mixin main-title{
-	font-family: $natosans-reg;
-	font-size: 24px;
-	color: $black;
-	margin: 20px 0px;
-	text-align: center;
-	border-bottom: solid 1px $light-gray;
-	padding: 0px 0px 20px 0px;
+  font-family: $natosans-reg;
+  font-size: 24px;
+  color: $black;
+  margin: 20px 0px;
+  text-align: center;
+  border-bottom: solid 1px $light-gray;
+  padding: 0px 0px 20px 0px;
 }
 @mixin border-radius-2{
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 @mixin border-radius-5{
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 @mixin border-radius-10{
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 @mixin border-radius-15{
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 @mixin border-radius-20{
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 }
 @mixin border-radius-zero{
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
 }
 @mixin border-radius-50per{
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 @mixin box-shadow-none{
-	box-shadow: none;
+  box-shadow: none;
 }
 @mixin transition25{
-	transition:All 0.25s ease-in-out; 
-    -webkit-transition:All 0.25s ease-in-out; 
-    -moz-transition:All 0.25s ease-in-out;  
-    -o-transition:All 0.25s ease-in-out;
+  transition:All 0.25s ease-in-out;
+  -webkit-transition:All 0.25s ease-in-out;
+  -moz-transition:All 0.25s ease-in-out;
+  -o-transition:All 0.25s ease-in-out;
 }
 @mixin transition-05{
-	transition:All 0.5s ease-in-out; 
-    -webkit-transition:All 0.5s ease-in-out; 
-    -moz-transition:All 0.5s ease-in-out;  
-    -o-transition:All 0.5s ease-in-out;
+  transition:All 0.5s ease-in-out;
+  -webkit-transition:All 0.5s ease-in-out;
+  -moz-transition:All 0.5s ease-in-out;
+  -o-transition:All 0.5s ease-in-out;
 }
 @mixin transition-1{
-	transition:All 1s ease-in-out; 
-    -webkit-transition:All 1s ease-in-out; 
-    -moz-transition:All 1s ease-in-out;  
-    -o-transition:All 1s ease-in-out;
+  transition:All 1s ease-in-out;
+  -webkit-transition:All 1s ease-in-out;
+  -moz-transition:All 1s ease-in-out;
+  -o-transition:All 1s ease-in-out;
 }

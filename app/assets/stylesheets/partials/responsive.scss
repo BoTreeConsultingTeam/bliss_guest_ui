@@ -3,43 +3,48 @@
 }
 
 @media only screen and (max-width:991px) {
-	.reservation-form-box {
-		.calendar-box {
-			margin: 0px 0px 20px;
-			width: 300px;
-		}
+  .reservation-form-box {
+    .calendar-box {
+      margin: 0px 0px 20px;
+      width: 300px;
+    }
 
-	}
+  }
 
 }
 
 @media only screen and (max-width:767px) {
-	.available-lodging {
-		.available-list-box {
-			p {
-				margin: 0px 0px 20px 0px;
-			}
+  .available-lodging {
+    .available-list-box {
+      p {
+        margin: 0px 0px 20px 0px;
+      }
 
-		}
+    }
 
-	}
+  }
 
-	.login-saparator {
-		display: block;
-		height: auto;
-		padding: 10px 0px;
-		margin: 0px 0px 10px;
+  .login-saparator {
+    display: block;
+    height: auto;
+    padding: 10px 0px;
+    margin: 0px 0px 10px;
 
-		p {
-			display: block;
-			margin: 0px;
-		}
+    p {
+      display: block;
+      margin: 0px;
+    }
 
-	}
+  }
 
-	.login-main-box {
-		margin: 0px 0px 10px;
-	}
+  .login-main-box {
+    margin: 0px 0px 10px;
+  }
+  .breitenbush-popup-img{
+    width: 250px;
+    float: none;
+    margin: 0px auto 20px;
+  }
 
 }
 
@@ -47,31 +52,31 @@
 }
 
 @media only screen and (max-width:480px) {
-	.reservation-main-box {
-		h1 {
-			font-size: 18px;
-		}
+  .reservation-main-box {
+    h1 {
+      font-size: 18px;
+    }
 
-	}
+  }
 
-	.available-lodging {
-		.available-list-box {
-			padding: 15px 0px 15px 0px;
-		}
+  .available-lodging {
+    .available-list-box {
+      padding: 15px 0px 15px 0px;
+    }
 
-		.available-list-box {
-			.thumb-img-box {
-				position: relative;
-				margin: 20px auto 0px;
-				top: 0px;
-			}
+    .available-list-box {
+      .thumb-img-box {
+        position: relative;
+        margin: 20px auto 0px;
+        top: 0px;
+      }
 
-			h5 {
-				margin: 15px 0px 10px;
-			}
+      h5 {
+        margin: 15px 0px 10px;
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
