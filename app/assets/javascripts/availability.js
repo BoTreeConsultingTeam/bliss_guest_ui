@@ -102,6 +102,20 @@ var Availability = (function() {
 
     }
 
+    function showHideGender(id){
+        if ($("#" + id).val()  == 1){
+            $('#gender_field').addClass('show');
+            $('#gender_field').removeClass('hide');
+            $('#willing_to_share').addClass('show')
+            $('#willing_to_share').removeClass('hide')
+        }else{
+            $('#gender_field').removeClass('show');
+            $('#gender_field').addClass('hide');
+            $('#willing_to_share').removeClass('show')
+            $('#willing_to_share').addClass('hide')
+        }
+    }
+
     return {
         isWeekend: isWeekend,
         isHoliday: isHoliday,
@@ -110,6 +124,7 @@ var Availability = (function() {
         arrivalDate: arrivalDate,
         setDepartureDate: setDepartureDate,
         overlapRestrictedPeriod: overlapRestrictedPeriod,
-        ShowWarningPopup: ShowWarningPopup
+        ShowWarningPopup: ShowWarningPopup,
+        showHideGender: showHideGender
     };
 })();

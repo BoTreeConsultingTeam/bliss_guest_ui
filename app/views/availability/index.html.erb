@@ -32,10 +32,10 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <p># Of Guests (including children) <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="<%= "#{t('help.availability.guest_count')}"  %>"></i></p>
-                <%= select_tag "people", options_for_select(1..4), class: "select2"%>
+                <%= select_tag "people", options_for_select(1..4, include_blank: true), prompt: "Please select", class: "select2", id: 'guest_count',onChange: "Availability.showHideGender('guest_count')"%>
               </div>
               <div class="clearfix"></div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="col-md-6 col-sm-6 col-xs-12 hide" id="gender_field">
                 <p>Gender <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Gender"></i></p>
                 <div class="btn-group custom-input" data-toggle="buttons">
                   <label class="btn btn-default radio-button-group">
@@ -46,7 +46,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="col-md-6 col-sm-6 col-xs-12 hide" id="willing_to_share">
                 <p>Willing To Share <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Willing To Share"></i></p>
                 <div class="btn-group custom-input" data-toggle="buttons">
                   <label class="btn btn-default radio-button-group">
