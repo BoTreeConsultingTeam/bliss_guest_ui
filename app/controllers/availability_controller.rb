@@ -4,6 +4,8 @@ class AvailabilityController < ApplicationController
     session[:nights] = params[:nights].to_i
     session[:people] = params[:people].to_i
     session[:date] = params[:date]
+    @start_date = Date.strptime(params[:date], '%m/%d/%Y')
+    @end_date = @start_date + params[:nights].to_i
     @check_availability = Availability::ReservationAvailabilityDisplay.new(params)
     @lodgings_list = @check_availability.call
   end
