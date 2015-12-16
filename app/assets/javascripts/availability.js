@@ -1,3 +1,15 @@
+$(document).ready(function(){
+    $('#myModal').on('hidden.bs.modal', function () {
+        $('#total_nights').val('');
+        $('#arrival_date').val('');
+        $('#departure_date').val('');
+        $(".select2-chosen").text("")
+    })
+    $('#total_nights').change(function(){
+        Availability.setDepartureDate()
+    })
+});
+
 var Availability = (function() {
     function arrivalDate(){
         var date = $('#dtp_input2').val();
@@ -90,16 +102,31 @@ var Availability = (function() {
 
     }
 
+    function setWarningMessage(restrictionPeriod, warningPeriod){
+        var errorMessages = []
+        if(result_hash.adult_only){
+            errorMessages.push("The dates you've chosen span an 'Adults-Only' time period.")
+        }else if(result_hash.gender == 'female'){
+            errorMessages.push("The dates you've chosen span a 'Women-Only' time period.")
+        }else if(result_hash.gender == 'male'){
+            errorMessages.push("The dates you've chosen span a 'Men-Only' time period.")
+        }else if(result_hash.special){
+            errorMessages.push(result_hash.message)
+        }
+        return errorMessages
+    }
+
     function ShowWarningPopup(){
         if($('#total_nights').val().length > 0){
+            warningPeriod = isWarnable()
             overlapRestrictedPeriodHash = overlapRestrictedPeriod();
             restricted_period = $.isEmptyObject(overlapRestrictedPeriodHash);
-            if(isWarnable() || !restricted_period ){
+            error_messages = setWarningMessage(overlapRestrictedPeriodHash, warningPeriod )
+            if( warningPeriod  || !restricted_period ){
+                $("#warning-text").text(error_messages.join('<%br>'))
                 $('#myModal').modal('show');
             }
         }
-
-
     }
 
     function showHideGender(id){

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'reservations/reserve_lodging/:id' => 'reservations#reserve_lodging' , :as => :reserve_lodging
   get 'guests/display_checklist' => 'guests#display_checklist', as: :display_checklist
   get 'guests/login' => 'guests#login'
+  post 'guests/seach_user' => 'guests#seach_user'
+  get 'reservations/lodging_details/:id' => 'reservations#lodging_details', as: :lodging_details
 end

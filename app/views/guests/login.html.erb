@@ -27,8 +27,10 @@
         <div class="login-main-box">
           <h5>New Account:</h5>
           <p>If you have made an overnight reservation before, please enter your email address below. If you have not, please call BHS at (503) 854-3320 to set up an account.</p>
-          <input type="email" name="" value="" placeholder="Email"/>
-          <button type="submit" name="" value="" class="btn btn-success" title="Set Up">Set Up</button>
+          <%= form_tag  guests_seach_user_path , method: :post do %>
+            <%= text_field_tag :entity, nil, placeholder: "Email"%>
+            <%= submit_tag "Set up", class: "btn btn-success", title: "Set Up"%>
+          <% end %>
         </div>
       </div>
     </div>

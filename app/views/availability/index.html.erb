@@ -81,13 +81,3 @@
     </div>
   </div>
 </div>
-<script>
-  $('#myModal').on('hidden.bs.modal', function () {
-    $('#total_nights').val('');
-    $('#arrival_date').val('');
-    $('#departure_date').val('');
-  })
-  $('#total_nights').change(function(){
-    Availability.setDepartureDate()
-  })
-</script>

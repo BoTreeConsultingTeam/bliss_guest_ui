@@ -1,18 +1,18 @@
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="lodgingInfoModal" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Breitenbush Tent</h4>
+        <h4 class="modal-title"><%= @lodging_rates["lodging_type"] %></h4>
       </div>
       <div class="modal-body">
         <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 pull-right">
           <div class="breitenbush-popup-img">
-            <img src="assets/images/img-thumb.jpg" alt="">
+            <img src="/assets/img-thumb.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-7 col-xs-12 pull-left">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p><%= t("lodging.#{@lodging_rates["lodging_type"]}")%></p>
         </div>
 
         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
@@ -28,56 +28,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>
-                    Adult
-                  </td>
-                  <td>
-                    $73.00
-                  </td>
-                  <td>$78.00</td>
-                  <td>$229.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    senior (65+)
-                  </td>
-                  <td>
-                    $66.00
-                  </td>
-                  <td>$71.00</td>
-                  <td>$208.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    Child (11-16)
-                  </td>
-                  <td>
-                    $39.00
-                  </td>
-                  <td>
-                    $39.00
-                  </td>
-                  <td>$117.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    Child (5-10)
-                  </td>
-                  <td>$28.00</td>
-                  <td>
-                    $39.00
-                  </td>
-                  <td>$84.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    Child (0-4)
-                  </td>
-                  <td>Free</td>
-                  <td>Free</td>
-                  <td>Free</td>
-                </tr>
+                <% ["adult", "child", "teen", "toddler"].each do |age| %>
+                  <tr>
+                    <td>
+                      <%= age %>
+                    </td>
+                    <td>
+                      $73.00
+                    </td>
+                    <td>$78.00</td>
+                    <td>$229.00</td>
+                  </tr>
+                <% end %>
                 </tbody>
               </table>
             </div>

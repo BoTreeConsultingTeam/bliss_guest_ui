@@ -19,4 +19,9 @@ class Availability::ReservationAvailabilityDisplay
     response = send_http_request('reservations/check_date_range.json', 'get', @parameters )
     JSON.parse(response.body)
   end
+
+  def lodging_details
+    response = send_http_request('/lodgings/price.json', 'post', @parameters )
+    JSON.parse(response.body)
+  end
 end

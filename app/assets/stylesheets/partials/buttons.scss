@@ -183,3 +183,16 @@ input[type="text"] {
   }
 
 }
+@each $btndemo in success,  default, primary, info, warning, danger {
+.modal-footer{
+  .btn-#{$btndemo} {
+      margin-bottom: $m-bot-0;
+    }
+    text-align:center !important;
+  
+}
+  }
+.font-size-60{
+  font-size:$error-font-size;  
+    color: $warning;
+}

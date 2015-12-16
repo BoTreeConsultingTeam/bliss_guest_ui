@@ -1,10 +1,24 @@
 en:
-  hello: "Hello world"
   help:
     availability:
-      night_count: 'This is the number of nights you would like to reserve. If you would like to reserve more than 6 days in a row, please contact Breitenbush directly.'
-      guest_count: 'If the total number of guests(including children) is more than 4. please contact Breitenbush directly.'
-      wts: 'If	you are coming to Breitenbush alone you can expect to share with one other person of the same gender. You can indicate
+     night_count: 'This is the number of nights you would like to reserve. If you would like to reserve more than 6 days in a row, please contact Breitenbush directly.'
+     guest_count: 'If the total number of guests(including children) is more than 4. please contact Breitenbush directly.'
+     wts: 'If	you are coming to Breitenbush alone you can expect to share with one other person of the same gender. You can indicate
         you want guaranteed  privacy(availability and prices will vary depending on time of week and time of year)or indicate you are
         willing to share. For Guaranteed Privacy the rates are doubled except for mid-week, non-holiday during the non-peak season.
          when GP costs $45 a night.'
+  lodging:
+    pv: "Your personal vehicle length must be less then 21ft(total length both the trailer and the tow vehicle). We do not allow any fires, propane lanterns, stoves ot generators."
+    own_tent: "You must stay within the footprint of your assigned tent site. Our tent sites fit one 'medium' size tent so please plan accordingly. We do not allow any fires, propane lanterns, stoves or generators."
+    lodge_room: "Please be aware that the lodge rooms are in the main lodge next to the bathrooms and can have noise at all hours."
+    dorm: "Please note that our dorms are single non-bath cabins with two sets of bunks, beds, sleeping a total of 4 people of the same gender"
+    bb_tent: "The Breitenbush plattform tents are approximately 10'x10' and come with 2 single size camp matresses on the floor and a trap overhead. We do not allow any fires, propane lanterns, stoves or generators."
+    plumbing_cabin: "This cabin includes a sink and a toilet, but not a shower or bath. Showers are available in the
+      nearby bathhouse. All cabins have at least one double/full bed. Additional beds could include another double bed,
+      a single bed, or bunk beds. If you would like to request specific bed types, please indicate this in the notes
+      field you'll find later in the 'Guest Details' section. We will do our best to accomodate your request, but
+      cannot make any guarantees."
+    non_plumbing_cabin: "All cabins have at least one double/full bed. Additional beds could include another double bed,
+      a single bed, or bunk beds. If you would like to request specific bed types, please indicate this in the notes
+      field, you'll find later in 'Guest Details' section. We will do our best to accommodate your request but cannot
+      make any guarantees.Toilets,sinks and shower are available in a nearby bathhouse."
