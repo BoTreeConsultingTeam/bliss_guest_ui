@@ -21,24 +21,34 @@
               <table class="table table-bordered">
                 <thead>
                 <tr>
-                  <th>Per Night per person</th>
-                  <th>Sun-thur</th>
-                  <th>Fri, Sat, Holidays</th>
-                  <th>Total price, per person for days selected</th>
+                  <th rowspan="2">Per Night per person</th>
+                  <th colspan="2">Sun-thur</th>
+                  <th colspan="2">Fri, Sat, Holidays</th>
+                </tr>
+                <tr>
+                  <th>Peak</th>
+                  <th>Non-Peak</th>
+                  <th>Peak</th>
+                  <th>Non-Peak</th>
                 </tr>
                 </thead>
                 <tbody>
                 <% ["adult", "child", "teen", "toddler"].each do |age| %>
-                  <tr>
-                    <td>
-                      <%= age %>
-                    </td>
-                    <td>
-                      $73.00
-                    </td>
-                    <td>$78.00</td>
-                    <td>$229.00</td>
-                  </tr>
+                <tr>
+                  <td>
+                    <%= age %>
+                  </td>
+                  <td>
+                    $73.00
+                  </td>
+                  <td>
+                    $78.00
+                  </td>
+                  <td>$80.00</td>
+                  <td>
+                    $90.00
+                  </td>
+                </tr>
                 <% end %>
                 </tbody>
               </table>

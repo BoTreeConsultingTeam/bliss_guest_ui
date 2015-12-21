@@ -22,3 +22,9 @@ en:
       a single bed, or bunk beds. If you would like to request specific bed types, please indicate this in the notes
       field, you'll find later in 'Guest Details' section. We will do our best to accommodate your request but cannot
       make any guarantees.Toilets,sinks and shower are available in a nearby bathhouse."
+  login:
+    failure_message: "The system was unable to find a guest record for you in our database. Please try a different email address or call us at 503‐854‐3320 to set up an account."
+    success_message:  "This system has found a guest record that is matched to that email address. If you would like to
+      create a user account with that information, click 'Create' and an email address with a temporary password will be
+      sent to the address you provided."
+    banned_match_message: "The system has found a problem with your guest record. Please call us at 503‐854‐3320."

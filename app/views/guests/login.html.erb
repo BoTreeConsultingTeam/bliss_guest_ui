@@ -1,3 +1,5 @@
+<div id="search_result">
+</div>
 <div class="row">
   <div class="col-xs-12">
     <div class="reservation-main-box">
@@ -27,7 +29,7 @@
         <div class="login-main-box">
           <h5>New Account:</h5>
           <p>If you have made an overnight reservation before, please enter your email address below. If you have not, please call BHS at (503) 854-3320 to set up an account.</p>
-          <%= form_tag  guests_seach_user_path , method: :post do %>
+          <%= form_tag  guests_seach_user_path , method: :post, remote: true do %>
             <%= text_field_tag :entity, nil, placeholder: "Email"%>
             <%= submit_tag "Set up", class: "btn btn-success", title: "Set Up"%>
           <% end %>
