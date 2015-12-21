@@ -3,6 +3,9 @@ class GuestsController < ApplicationController
   end
 
   def login
+    if session[:email].present?
+      @email = session[:email]
+    end
   end
 
   def search_user
@@ -33,6 +36,8 @@ class GuestsController < ApplicationController
     if @guest_creation["role_creation"] == 'success'
       @mail_result = GuestMailer.send_setup_details(@guest_creation['user'].merge!({ email: params[:email]})).deliver
     end
+    session[:email] = params[:email]
+    flash[:success] = "An email has been sent with a temporary password. Please login using that password."
     redirect_to :back
   end
 end
