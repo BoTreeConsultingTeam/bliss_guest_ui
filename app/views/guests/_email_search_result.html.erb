@@ -8,7 +8,11 @@
         <p class="text-center" id="warning-text"><%= @message %></p>
       </div>
       <div class="modal-footer text-center">
-        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" title`="Ok">Create</button>
+        <%= form_tag create_user_account_path, method: :post do %>
+          <%= hidden_field_tag :email, @email %>
+          <%= hidden_field_tag :role, :guest_user %>
+          <%= submit_tag 'Create', class: "btn btn-success btn-sm"%>
+        <% end %>
         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" title="Cancel">Cancel</button>
       </div>
     </div>

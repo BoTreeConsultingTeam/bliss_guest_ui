@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'guests/login' => 'guests#login'
   post 'guests/seach_user' => 'guests#search_user'
   get 'reservations/lodging_details/:id' => 'reservations#lodging_details', as: :lodging_details
+  post 'guests/create' => 'guests#create_user', as: :create_user_account
 end

@@ -6,7 +6,8 @@ class GuestsController < ApplicationController
   end
 
   def search_user
-    @search = Guests::Search.new(params)
+    @search = Guests::SearchOrCreate.new(params)
+    @email = params[:entity]
     @guest_list = @search.call
     if @guest_list.present?
       if @guest_list["entity"] == "Not found"
@@ -20,9 +21,18 @@ class GuestsController < ApplicationController
           end
         end
         end
-      end
+    end
     respond_to do |format|
       format.js
     end
+  end
+
+  def create_user
+    @create_guest = Guests::SearchOrCreate.new(params)
+    @guest_creation = @create_guest.create
+    if @guest_creation["role_creation"] == 'success'
+      @mail_result = GuestMailer.send_setup_details(@guest_creation['user'].merge!({ email: params[:email]})).deliver
+    end
+    redirect_to :back
   end
 end

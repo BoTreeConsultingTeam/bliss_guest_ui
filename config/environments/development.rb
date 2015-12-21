@@ -38,4 +38,18 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { host: 'localhost:5000' }  # Specify mailer config for devise
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/previews"
+
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.gmail.com',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => "#{ENV['DEMO_MAIL']}",
+    :password       => "#{ENV['DEMO_PASSWORD']}",
+    :enable_starttls_auto => true,
+    return_response: true
+  }
 end
