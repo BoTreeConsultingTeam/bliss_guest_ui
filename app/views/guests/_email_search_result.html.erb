@@ -8,12 +8,16 @@
         <p class="text-center" id="warning-text"><%= @message %></p>
       </div>
       <div class="modal-footer text-center">
-        <%= form_tag create_user_account_path, method: :post do %>
-          <%= hidden_field_tag :email, @email %>
-          <%= hidden_field_tag :role, :guest_user %>
-          <%= submit_tag 'Create', class: "btn btn-success btn-sm"%>
+        <% if setup_account %>
+          <%= form_tag create_user_account_path, method: :post do %>
+            <%= hidden_field_tag :email, @email %>
+            <%= hidden_field_tag :role, :guest_user %>
+            <%= submit_tag 'Create', class: "btn btn-success btn-sm"%>
+            <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" title="Cancel">Cancel</button>
+          <% end %>
+        <% else %>
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" title="Cancel">Okay</button>
         <% end %>
-        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" title="Cancel">Cancel</button>
       </div>
     </div>
 

@@ -1,2 +1,2 @@
-$('#search_result').html("<%=escape_javascript(render partial: 'guests/email_search_result', locals: {message: @message}) %>");
+$('#search_result').html("<%=escape_javascript(render partial: 'guests/email_search_result', locals: {message: @message, setup_account: @setup_account}) %>");
 $('#search_result_modal').modal('show');

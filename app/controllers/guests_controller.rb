@@ -15,11 +15,14 @@ class GuestsController < ApplicationController
     if @guest_list.present?
       if @guest_list["entity"] == "Not found"
         @message = t("login.failure_message")
+        @setup_account = false
       else
         if @guest_list["entity"]["person"].present?
           if @guest_list["entity"]["person"]["banned"]
+            @setup_account = false
             @message = t("login.banned_match_message")
           else
+            @setup_account = true
             @message = t("login.success_message")
           end
         end
