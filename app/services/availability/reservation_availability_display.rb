@@ -22,6 +22,7 @@ class Availability::ReservationAvailabilityDisplay
 
   def lodging_details
     response = send_http_request('/lodgings/price.json', 'post', @parameters )
-    JSON.parse(response.body)
+    lodging_details = JSON.parse(response.body)
+    LodgingRatesPresenter.new(lodging_details)
   end
 end

@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><%= @lodging_rates["lodging_type"] %></h4>
+        <h4 class="modal-title"><%= @lodging_rates.lodging_type %></h4>
       </div>
       <div class="modal-body">
         <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 pull-right">
@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-7 col-xs-12 pull-left">
-          <p><%= t("lodging.#{@lodging_rates["lodging_type"]}")%></p>
+          <p><%= t("lodging.#{@lodging_rates.lodging_type}")%></p>
         </div>
 
         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
@@ -39,14 +39,16 @@
                     <%= age %>
                   </td>
                   <td>
-                    $73.00
+                    <%= weekday_peak_rate(@lodging_rates, age) %>
                   </td>
                   <td>
-                    $78.00
+                    <%= weekend_peak_rate(@lodging_rates, age) %>
                   </td>
-                  <td>$80.00</td>
                   <td>
-                    $90.00
+                    <%= weekday_non_peak_rate(@lodging_rates, age) %>
+                  </td>
+                  <td>
+                    <%= weekend_non_peak_rate(@lodging_rates, age) %>
                   </td>
                 </tr>
                 <% end %>
